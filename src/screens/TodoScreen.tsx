@@ -109,7 +109,6 @@ const TodoScreen = () => {
           style={{ flex: 1 }}
         />
         <TouchableOpacity style={styles.addButton} onPress={() => {
-          console.log("Ckicked");
           dispatch(addTodo({ id: "567", title: "Second items" }))
         }}>
           {/* </TouchableOpacity>/<TouchableOpacity style={styles.addButton} onPress={() => setShowEditor({ ...showEditor, showAdd: true })}> */}

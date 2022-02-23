@@ -12,7 +12,6 @@ export const todosReducer = (state = initialTodos, action) => {
 
 // actions
 export const addTodo = (todo) => {
-  console.log("action creator");
   return {
     type: "todos/addTodo",
     payload: todo,
