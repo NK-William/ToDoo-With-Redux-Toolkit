@@ -42,7 +42,20 @@ const options = {
   },
 };
 
+// craeteSlice(using Immer) also helps with enforcing return values from reducer
+// to be Immutabe, even if by mistake a programmer added mutable code
 export const searchSlice = createSlice(options);
+
+/***
+ * Object returned by searchSlice = createSlice(options)
+ * {
+ *  name: 'searchValue',
+ *  reducer: (state, action) => newState,
+ *  actions: {
+ *    setSearchValue: (payload) => ({type: "searchValue/setSearchValue", payload})
+ *   }
+ * }
+ */
 
 // Selectors
 export const selectSearchValue = (state) => state.searchValue;

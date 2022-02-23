@@ -4,7 +4,7 @@ import { searchSlice } from "./features/searchValue/searchValueSlice";
 
 const reducers = {
   todos: todosReducer,
-  searchValue: searchSlice,
+  searchValue: searchSlice.reducer,
 };
 
 export const store = createStore(combineReducers(reducers));
