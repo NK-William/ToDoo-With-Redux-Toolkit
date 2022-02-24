@@ -33,7 +33,7 @@ import { createSlice } from "@reduxjs/toolkit";
  */
 const options = {
   name: "searchValue",
-  initialState: "Test on createSlice",
+  initialState: "createSlice is working",
   reducers: {
     // case reducer
     setSearchValue: (state, action) => {
@@ -56,6 +56,12 @@ export const searchSlice = createSlice(options);
  *   }
  * }
  */
+
+// exporting the actions
+export const { setSearchValue } = searchSlice.actions;
+
+// expo reducer
+export default searchSlice.reducer; // searchSlice.reducer is the complete reducer function, a.k.a the “slice reducer
 
 // Selectors
 export const selectSearchValue = (state) => state.searchValue;

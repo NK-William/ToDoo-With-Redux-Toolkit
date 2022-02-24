@@ -25,7 +25,7 @@ const TodoScreen = () => {
   const todos = useSelector(selectTodos);
   const selectedSearchValue = useSelector(selectSearchValue);
   const [showEditor, setShowEditor] = useState({ showAdd: false, showEdit: false });
-  const [searchValue, setSearchValue] = useState("");
+  const [searchText, setSearchText] = useState("");
   const editMode = showEditor.showAdd || showEditor.showEdit;
 
   const [todoText, setTodoText] = useState("")
@@ -100,8 +100,8 @@ const TodoScreen = () => {
           textAlign={"center"}
           autoCapitalize="none"
           autoCorrect={false}
-          value={searchValue}
-          onChangeText={(text) => setSearchValue(text)} />
+          value={searchText}
+          onChangeText={(text) => setSearchText(text)} />
         <FlatList
           data={doto}
           renderItem={renderItem}
