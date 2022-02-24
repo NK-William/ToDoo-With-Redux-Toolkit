@@ -33,7 +33,7 @@ import { createSlice } from "@reduxjs/toolkit";
  */
 const options = {
   name: "searchValue",
-  initialState: "createSlice is working",
+  initialState: "createSlice is working with configureStore",
   reducers: {
     // case reducer
     setSearchValue: (state, action) => {
