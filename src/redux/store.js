@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from "redux";
-import { todosReducer } from "./features/todos/todosSlice";
+import todosReducer from "./features/todos/todosSlice";
 import searchValueReducer from "./features/searchValue/searchValueSlice";
 import { configureStore } from "@reduxjs/toolkit";
 

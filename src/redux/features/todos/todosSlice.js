@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 // reducer
-const initialTodos = [{ id: "123", title: "First item" }];
+/*const initialTodos = [{ id: "123", title: "First item" }];
 
 export const todosReducer = (state = initialTodos, action) => {
   switch (action.type) {
@@ -18,7 +18,26 @@ export const addTodo = (todo) => {
     type: "todos/addTodo",
     payload: todo,
   };
+};*/
+
+const options = {
+  name: "todos",
+  initialState: [{ id: "123", title: "First item" }],
+  reducers: {
+    //case reducers
+    addTodo: () => {
+      return [...state, action.payload];
+    },
+  },
 };
+
+export const todosSlice = createSlice(options);
+
+// exporting the actions
+export const { addTodo } = todosSlice.actions;
+
+// expo reducer
+export default todosSlice.reducer; // todosSlice.reducer is the complete reducer function, a.k.a the “slice reducer
 
 // selectors
 export const selectTodos = (state) => state.todos;
