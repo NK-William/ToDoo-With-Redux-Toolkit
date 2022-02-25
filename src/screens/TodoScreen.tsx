@@ -109,7 +109,7 @@ const TodoScreen = () => {
           style={{ flex: 1 }}
         />
         <TouchableOpacity style={styles.addButton} onPress={() => {
-          dispatch(addTodo({ id: "567", title: "Second items" }))
+          dispatch(addTodo({ id: "567", title: "Second item" }))
         }}>
           {/* </TouchableOpacity>/<TouchableOpacity style={styles.addButton} onPress={() => setShowEditor({ ...showEditor, showAdd: true })}> */}
           <Entypo name="plus" size={24} color="white" />

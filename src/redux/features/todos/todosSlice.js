@@ -25,7 +25,7 @@ const options = {
   initialState: [{ id: "123", title: "First item" }],
   reducers: {
     //case reducers
-    addTodo: () => {
+    addTodo: (state, action) => {
       return [...state, action.payload];
     },
   },
