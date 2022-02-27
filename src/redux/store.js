@@ -3,6 +3,8 @@ import todosReducer from "./features/todos/todosSlice";
 import searchValueReducer from "./features/searchValue/searchValueSlice";
 import { configureStore } from "@reduxjs/toolkit";
 
+// Ended here: https://www.codecademy.com/paths/advanced-react-redux-sp/tracks/advanced-react-redux-sp-redux/modules/redux-middleware-and-thunks/lessons/redux-middleware/exercises/redux-middleware-introduction
+// On entering middleware topic
 const reducer = {
   todos: todosReducer,
   searchValue: searchValueReducer,
