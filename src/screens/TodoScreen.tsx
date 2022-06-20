@@ -92,16 +92,16 @@ const TodoScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.appTitle}>ToDoo</Text>
-      <Text style={styles.todotitle}>2 Tasks</Text>
+      {/* <Text style={styles.todotitle}>2 Tasks</Text> */}
       <View style={styles.itemsContainer}>
-        <TextInput
+        {/* <TextInput
           style={styles.search}
           placeholder="search"
           textAlign={"center"}
           autoCapitalize="none"
           autoCorrect={false}
           value={searchText}
-          onChangeText={(text) => setSearchText(text)} />
+          onChangeText={(text) => setSearchText(text)} /> */}
         <FlatList
           data={doto}
           renderItem={renderItem}

@@ -3,11 +3,7 @@ import React, { SetStateAction, Dispatch, useState } from 'react';
 import CheckBox from 'expo-checkbox';
 import { AntDesign, Entypo } from '@expo/vector-icons';
 
-const TodoItem = ({ item, onDeletePressed, onEditPressed }: {
-    item: { title: string, id: string },
-    onDeletePressed: (id: string) => void,
-    onEditPressed: (id: string) => void,
-}) => {
+const LocalTodoItem = ({ item, onDeletePressed, onEditPressed }) => {
     const [clicked, setClicked] = useState(false);
 
     return (
@@ -39,7 +35,7 @@ const TodoItem = ({ item, onDeletePressed, onEditPressed }: {
     );
 };
 
-export default TodoItem;
+export default LocalTodoItem;
 
 const styles = StyleSheet.create({
     itemContainer:
